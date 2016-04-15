@@ -32,7 +32,7 @@ end
   where sub_heaps is a list of heaps.
 
   TODO: Allow the comparison function to be specified
-        Implement delete-min
+        Implement decrease_key
   """
 
   @type key :: any

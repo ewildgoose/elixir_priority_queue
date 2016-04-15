@@ -3,8 +3,13 @@ defmodule PriorityQueue.Mixfile do
 
   def project do
     [app: :priority_queue,
-     version: "0.0.1",
+     version: "1.0.0",
      elixir: "~> 1.0",
+     build_embedded: Mix.env == :prod,
+     start_permanent: Mix.env == :prod,
+     description: "Priority Queue for Elixir. Heap implementation",
+     package: package,
+     source_url: "https://github.com/ewildgoose/elixir_priority_queue",
      deps: deps]
   end
 
@@ -26,5 +31,12 @@ defmodule PriorityQueue.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     []
+  end
+
+  defp package do
+    [files: ~w(lib mix.exs README.md LICENSE),
+     contributors: ["Ed Wildgoose"],
+     licenses: ["Apache 2.0"],
+     links: %{"GitHub" => "https://github.com/ewildgoose/elixir_priority_queue"}]
   end
 end
