@@ -1,1 +1,2 @@
-%{"ex_doc": {:git, "https://github.com/elixir-lang/ex_doc.git", "dda388c2287cbebee5fe5da9bcc6c00ac6c60c40", []}}
+%{"earmark": {:hex, :earmark, "0.2.1"},
+  "ex_doc": {:hex, :ex_doc, "0.11.4"}}
