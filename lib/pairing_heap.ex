@@ -84,7 +84,6 @@ end
   iex> heap1 = PairingHeap.new(2, "biggest")
   iex> PairingHeap.meld(heap0, heap1, :>)
   {2, "biggest", [{1, "smallest", []}]}
-
   """
   @spec meld(t, t) :: t
   def meld(nil, heap), do: heap
@@ -104,9 +103,21 @@ end
 
   @doc """
   Merge (meld) two heaps
+
+  iex> heap0 = PairingHeap.new(1, "smallest")
+  iex> heap1 = PairingHeap.new(2, "biggest")
+  iex> PairingHeap.merge(heap0, heap1)
+  {1, "smallest", [{2, "biggest", []}]}
+
+  iex> heap0 = PairingHeap.new(1, "smallest")
+  iex> heap1 = PairingHeap.new(2, "biggest")
+  iex> PairingHeap.merge(heap0, heap1, :>)
+  {2, "biggest", [{1, "smallest", []}]}
   """
   @spec merge(t, t) :: t
+  # TODO - add typespec for merge/3
   def merge(h1, h2), do: meld(h1, h2)
+  def merge(h1, h2, comparison), do: meld(h1, h2, comparison)
 
   @doc """
   min item in the heap
