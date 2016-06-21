@@ -148,6 +148,9 @@ end
 
   @doc """
   Returns new, empty priority queue
+
+  iex> PriorityQueue.new
+  %PriorityQueue{heap: nil, size: 0}
   """
   def new, do: %__MODULE__{}
 
