@@ -1,10 +1,8 @@
 defmodule PriorityQueue do
-
-if Application.get_env(:priority_queue, :native) do
-  @compile :native
-  @compile {:hipe, [:o3]}
-end
-
+  if Application.compile_env(:priority_queue, :native) do
+    @compile :native
+    @compile {:hipe, [:o3]}
+  end
 
   @moduledoc """
   Priority Queues in Elixir

@@ -1,9 +1,8 @@
 defmodule PairingHeap do
-
-if Application.get_env(:priority_queue, :native) do
-  @compile :native
-  @compile {:hipe, [:o3]}
-end
+  if Application.compile_env(:priority_queue, :native) do
+    @compile :native
+    @compile {:hipe, [:o3]}
+  end
 
   @moduledoc """
   Pairing Heap implementation
@@ -114,10 +113,8 @@ end
   def new(), do: nil
   def new(key, value), do: {key, value, []}
 
-  @doc """
-  Pairing Heaps get their name from the special "pair" operation, which is used to
-  'Pair up' (recursively meld) a list of pairing heaps.
-  """
+  # Pairing Heaps get their name from the special "pair" operation, which is used to
+  # 'Pair up' (recursively meld) a list of pairing heaps.
   @spec pair([t]) :: t
   defp pair([]), do: nil
   defp pair([h]), do: h

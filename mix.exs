@@ -8,9 +8,9 @@ defmodule PriorityQueue.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "Priority Queue for Elixir. Heap implementation",
-     package: package,
+     package: package(),
      source_url: "https://github.com/ewildgoose/elixir_priority_queue",
-     deps: deps]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
