@@ -3,7 +3,7 @@ defmodule PriorityQueue.Mixfile do
 
   def project do
     [app: :priority_queue,
-     version: "1.0.0",
+     version: "1.1.0",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -30,8 +30,8 @@ defmodule PriorityQueue.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:earmark, "~> 0.2.0", only: :docs},
-     {:ex_doc, "~> 0.11.0", only: :docs}]
+    [{:earmark, "~> 0.2", only: :docs},
+     {:ex_doc, "~> 0.11", only: :docs}]
   end
 
   defp package do
