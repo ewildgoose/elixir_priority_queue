@@ -30,7 +30,7 @@ defmodule PriorityQueue.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:earmark, "~> 0.2", only: :docs},
+    [{:earmark, "~> 1.0", only: :docs},
      {:ex_doc, "~> 0.11", only: :docs}]
   end
 
