@@ -37,7 +37,7 @@ defmodule PriorityQueue.Mixfile do
   defp package do
     [files: ~w(lib mix.exs README.md LICENSE),
      maintainers: ["Ed Wildgoose"],
-     licenses: ["Apache 2.0"],
+     licenses: ["Apache-2.0"],
      links: %{"GitHub" => "https://github.com/ewildgoose/elixir_priority_queue"}]
   end
 end
