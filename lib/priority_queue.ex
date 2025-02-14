@@ -349,5 +349,10 @@ defimpl Enumerable, for: PriorityQueue do
       4
   """
   def count(pq), do: {:ok, PriorityQueue.size(pq)}
+
+  @doc """
+  Implements 'slice' for PriorityQueue
+  """
+  def slice(_), do: {:error, __MODULE__}
 end
 
